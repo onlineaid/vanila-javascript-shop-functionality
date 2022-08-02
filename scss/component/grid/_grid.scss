@@ -1,0 +1,208 @@
+/* 
+-------------------------
+   4.1 : Grid view css
+-------------------------
+*/
+
+// version v1 
+.big-grid {
+    margin-bottom: 30px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 20px;
+    transition: 0.5s ease;
+    box-shadow: var(--stripe-shadow);
+
+    img {
+        border-radius: 20px;
+        transition: 0.5s ease;
+    }
+   
+
+    img:not(.big) {
+        height: 200px;
+        object-fit: cover;
+    }
+
+    img.big {
+        height: 300px;
+        object-fit: cover;
+    }
+
+   
+
+    .shop-link {
+        position: absolute;
+        z-index: 111;
+        left: 50%;
+        bottom: 5%;
+        transform: translateX(-50%);
+        background-color: var(--dark-opacity);
+        backdrop-filter: blur(4px);
+        padding: 5px;
+        border-radius: 20px;
+        width: 200px;
+    }
+
+    .grid-content-hover {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background: rgba(31, 31, 31, 0.462);
+        // backdrop-filter: blur(100px);
+        width: 80%;
+        height: 80%;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        border-radius: inherit;
+        // opacity: 0;
+        transition: 0.5s ease;
+        color: #fff;
+
+        h2{
+            font-size: 18px;
+        }
+
+        h5{
+            font-size: 12px;
+
+        }
+    }
+
+    .product-tag {
+        position: absolute;
+        top: 2%;
+        left: 5%;
+    }
+
+    &:hover .grid-content-hover {
+        opacity: 1;
+        transform: translate(-50%, -50%);
+        z-index: -1;
+    }
+    &:hover img {
+        transform: scale(1.2);
+        border-radius: 20px;
+    }
+}
+
+.big-grid-v2{
+    margin-bottom: 30px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 20px;
+    transition: 0.5s ease;
+    
+    box-shadow: var(--stripe-shadow);
+
+    img {
+        border-radius: 20px;
+        transition: 0.5s ease;
+    }
+   
+
+    img:not(.big) {
+        height: 200px;
+        object-fit: cover;
+    }
+
+    img.big {
+        height: 300px;
+        object-fit: cover;
+    }
+
+   
+
+    .shop-link {
+        position: absolute;
+        z-index: 111;
+        left: 50%;
+        bottom: 5%;
+        transform: translateX(-50%);
+        background-color: var(--dark-opacity);
+        backdrop-filter: blur(4px);
+        padding: 5px;
+        border-radius: 20px;
+        width: 200px;
+
+    }
+
+    .grid-content-hover {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background: rgba(31, 31, 31, 0.462);
+        // backdrop-filter: blur(100px);
+        width: 80%;
+        height: 80%;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        border-radius: inherit;
+        opacity: 0;
+        transition: 0.5s ease;
+        color: #fff;
+        
+        h2{
+            font-size: 18px;
+        }
+
+        h5{
+            font-size: 12px;
+
+        }
+    }
+
+    .product-tag {
+        position: absolute;
+        top: 2%;
+        left: 5%;
+    }
+
+    &:hover .grid-content-hover {
+        opacity: 1;
+        transform: translate(-50%, -50%);
+        // z-index: -1;
+    }
+    &:hover img {
+        transform: scale(1.2);
+        border-radius: 20px;
+    }
+
+}
+
+@media(max-width: 557px){
+    .big-grid {
+
+    
+        img:not(.big) {
+            height: 200px;
+            object-fit: cover;
+        }
+    
+        img.big {
+            height: 200px;
+            object-fit: cover;
+        }  
+    }
+    
+    .big-grid-v2 {
+    
+        img:not(.big) {
+            height: 200px;
+            object-fit: cover;
+        }
+    
+        img.big {
+            height: 200px;
+            object-fit: cover;
+        }  
+    }
+}

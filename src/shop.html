@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<!-- Required meta tags -->
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<!-- Favicon image  -->
+	<link rel="icon" type="image/x-icon" href="https://res.cloudinary.com/onlineaid/image/upload/v1656973670/theme.0.0.1/favicon-modified_w0q0rm.png">
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css" />
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+	<link rel="stylesheet" href="../css/other/bootstrap.min.css">
+
+	<!-- Fontawesome CSS -->
+	<link rel="stylesheet" href="../node_modules/@fortawesome/fontawesome-free/css/all.min.css" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<link rel="stylesheet" href="../css/other/all.min.css">
+	
+	<!-- My Own CSS -->
+	<link rel="stylesheet" href="../css/style.css" />
+	<title>Advance Menu</title>
+</head>
+
+<body>
+	<!-- Page Loader  -->
+	<div class="loading"></div>
+
+    
+    <main>
+		<div class="container">
+			<div class="row">
+
+				<!-- Left side -->
+				<div class="col-md-3">
+					
+					<aside class="sidebar left_swipe">
+						<div class="main-search my-5">
+							<!-- Search Form  -->
+							<form class="d-flex align-items-center border-5">
+								<!-- Search Input   -->
+								<input type="search" class="search-input" />
+								<!-- Enter search btn or icon  -->
+								<div class="enter"><i class="fa-solid fa-magnifying-glass px-3"></i></div>
+							</form>
+						</div>
+						<!-- Price slider  -->
+						<div class="range bg-darkopacity">
+							<div class="range-center pb-4">
+								<h1 class="fs-6">Price</h1>
+								<div class="dual-range" data-min="10" data-max="1000"><span class="handle left"></span> <span class="highlight"></span> <span class="handle right"></span></div>
+							</div>
+						</div>
+						<!-- Color  -->
+						<div class="col-md-12 text-center pt-5">
+							<p>view product with category</p>
+							<div class="filter-btn">
+								<button id="men">Men</button>
+								<button id="women">Women</button>
+								<button id="ele">Electronic</button>
+								<button id="jwa">Jwalary</button>
+								<button id="resetFilter">Reset</button>
+							</div>
+						</div>
+						
+						<div class="color pt-5 pb-3">
+							<h5 class="mb-2 text-center">Colours</h5>
+							<div class="avaible-color text-center">
+								<div class="single_color bg-danger" id="red">color</div>
+								<div class="single_color bg-success">color</div>
+								<div class="single_color bg-primary">color</div>
+								<div class="single_color bg-info">color</div>
+								<div class="single_color bg-warning">color</div>
+								<div class="single_color bg-secondary">color</div>
+								<div class="single_color bg-black">color</div>
+							</div>
+						</div>
+						<!-- Size  -->
+						<div class="size pt-4 pb-3">
+							<h5 class="mb-2 text-center">Size</h5>
+							<div class="size_specification">
+								<div class="size-box">S</div>
+								<div class="size-box">M</div>
+								<div class="size-box">XL</div>
+								<div class="size-box">XXL</div>
+							</div>
+						</div>
+						<!-- product catagory  -->
+						<div class="category_swipe my-5 rounded-20">
+							<h5 class="mt-2">Top 10 Categories</h5>
+							<!-- <hr /> -->
+							<ul>
+								<li class="mt-0"><i class="fa-solid fa-arrow-right"></i><a href="">Category 01</a></li>
+								<li><i class="fa-solid fa-arrow-right"></i><a href="">Category 02</a></li>
+								<li><i class="fa-solid fa-arrow-right"></i><a href="">Category 03</a></li>
+								<li><i class="fa-solid fa-arrow-right"></i><a href="">Category 04</a></li>
+								<li><i class="fa-solid fa-arrow-right"></i><a href="">Category 05</a></li>
+								<li><i class="fa-solid fa-arrow-right"></i><a href="">Category 06</a></li>
+								<li><i class="fa-solid fa-arrow-right"></i><a href="">Category 07</a></li>
+								<li><i class="fa-solid fa-arrow-right"></i><a href="">Category 08</a></li>
+								<li><i class="fa-solid fa-arrow-right"></i><a href="">Category 09</a></li>
+								<li><i class="fa-solid fa-arrow-right"></i><a href="">Category 10</a></li>
+							</ul>
+						</div>
+						<!-- Brand catagory  -->
+						<div class="category_swipe my-5 rounded-20">
+							<h5 class="mt-2">Top Brand</h5>
+							<!-- <hr /> -->
+							<ul>
+								<li class="mt-0"><i class="fa-solid fa-arrow-right"></i><a href="">Apple</a></li>
+								<li><i class="fa-solid fa-arrow-right"></i><a href="">Samsung</a></li>
+								<li><i class="fa-solid fa-arrow-right"></i><a href="">Nike</a></li>
+								<li><i class="fa-solid fa-arrow-right"></i><a href="">Adidas</a></li>
+								<li><i class="fa-solid fa-arrow-right"></i><a href="">Zara</a></li>
+								<li><i class="fa-solid fa-arrow-right"></i><a href="">H&M</a></li>
+								<li><i class="fa-solid fa-arrow-right"></i><a href="">Rolex</a></li>
+								<li><i class="fa-solid fa-arrow-right"></i><a href="">Calvin Klein</a></li>
+								<li><i class="fa-solid fa-arrow-right"></i><a href="">Lacoste</a></li>
+								<li><i class="fa-solid fa-arrow-right"></i><a href="">Puma</a></li>
+							</ul>
+						</div>
+						<div class="CS_reviews py-4 mb-5">
+							<h5>Customer Review</h5>
+							<hr />
+							<ul>
+								<li><a href="">⭐⭐⭐⭐⭐</a></li>
+								<li><a href="">⭐⭐⭐⭐</a></li>
+								<li><a href="">⭐⭐⭐</a></li>
+								<li><a href="">⭐⭐</a></li>
+								<li><a href="">⭐</a></li>
+							</ul>
+						</div>
+					</aside>
+			
+					
+				</div>
+
+				<!-- Right side  -->
+				<div class="col-lg-9 col-md-12">
+					<div class="filter-buttons py-5 justify-content-lg-end">
+						<button class="open_side_bar btn btn-primary px-3">Open filter</button>
+						<div class="right-side justify-content-between">
+							<div class="sort">
+								<select>
+									<option value="" selected="" disabled="">Sort by Price</option>
+									<option value="popular">Popular</option>
+									<option value="lth">Low to High</option>
+									<option value="htl">High to Low</option>
+								</select>
+							</div>
+							<div class="layout-filter d-flex">
+								<div class="list-view-button"><i class="fa-solid fa-list"></i></div>
+								<div class="dual-view-button"><i class="fa-solid fa-table-cells-large"></i></div>
+								<div class="grid-view-button"><i class="fa-solid fa-table-cells"></i></div>
+							</div>
+						</div>
+					</div>
+					<div class="product_view" id="output">
+						<!-- Visit js file  -->
+					</div>
+				</div>
+				
+			</div>
+		</div>
+	</main>
+
+	
+	<script>
+		// Page load animation
+		let loading = document.querySelector(".loading");
+		window.addEventListener("load", () => {
+			loading.style.display = "none";
+		});
+		
+	</script>
+	
+	<script src="../js/custom_range.js"></script>
+	<script src="./shop.js"></script>
+</body>
+
+</html>

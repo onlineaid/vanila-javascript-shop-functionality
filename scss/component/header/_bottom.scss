@@ -1,0 +1,154 @@
+/* 
+-------------------------
+    1.7 : Bottom header css
+-------------------------
+*/
+
+.bottom-header {
+    background-color: var(--dark-opacity);
+    padding: 7px 0px;
+
+    text-align: center;
+
+    .navigation {
+        ul {
+            display: flex;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+
+            li {
+
+                a {
+                    color: var(--dark-text);
+                    display: block;
+                    text-decoration: none;
+                    padding: 5px 15px;
+                    border-radius: 5px;
+                    border: 2px solid transparent;
+                    transition: 0.3s ease;
+
+                    &:hover {
+                        border-left: 2px solid salmon;
+                        border-right: 2px solid salmon;
+                        background-color: var(--dark-opacity);
+                    }
+                }
+
+                .mega-drop {
+                    width: 100%;
+                    position: absolute;
+                    left: 0;
+                    right: auto;
+                    display: flex;
+                    flex-direction: row;
+                    z-index: 1111;
+                    border-radius: 20px;
+                    padding: 0;
+                    margin: 0;
+                    
+                    background: rgba(255, 255, 255, 0.581);
+                    backdrop-filter: blur(50px);
+                    opacity: 0;
+                    visibility: hidden;
+                    border-bottom: 2px solid salmon;
+                    transition: 0.1s ease;
+                    padding: 10px;
+                    box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+
+                    ul.first {
+                        width: 25%;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: flex-start;
+                        gap: 2px;
+                        padding: 10px;
+                        
+                        h6{
+                            padding: 10px 10px;
+                            margin-bottom: 0;
+                            border-bottom: 1px solid #ccc;
+                            color: salmon;
+                            width: 100%;
+                            margin: 0px 10px;
+                        }
+
+                        li{
+                            width: 100%;
+                            text-align: left;
+                            a{
+                                color: black;
+                            }
+                        }
+                    }
+                }
+                .drop-mega-right{
+                    width: 300px;
+                    position: absolute;
+                    right: 0;
+                    display: flex;
+                    flex-direction: row;
+                    z-index: 1111;
+                    border-radius: 20px;
+                    padding: 0;
+                    margin: 0;
+                    
+                    background: rgba(255, 255, 255, 0.581);
+                    backdrop-filter: blur(50px);
+                    opacity: 0;
+                    visibility: hidden;
+                    transition: 0.5s ease;
+                    padding: 10px;
+                    box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+
+                    ul.first {
+                        width: 100%;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: flex-start;
+                        gap: 2px;
+                        padding: 10px;
+                        
+                        h6{
+                            padding: 10px 10px;
+                            margin-bottom: 0;
+                            border-bottom: 1px solid #ccc;
+                            color: salmon;
+                            width: 100%;
+                            margin: 0px 10px;
+                        }
+
+                        li{
+                            width: 100%;
+                            text-align: left;
+                            a{
+                                color: black;
+                            }
+                        }
+                    }
+                }
+                .drop-mega-left{
+                    @extend .drop-mega-right;
+                    left: 0
+                }
+
+                &:hover .mega-drop {
+                    opacity: 1;
+                    visibility: visible;
+                }
+                &:hover .drop-mega-right {
+                    opacity: 1;
+                    visibility: visible;
+                }
+            }
+        }
+    }
+}
+@media(max-width: 992px){
+    .bottom-header{
+        display: none;
+    }
+}

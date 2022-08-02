@@ -1,0 +1,81 @@
+/* 
+-------------------------
+    2.1 : Bootstrap slider css
+-------------------------
+*/
+.main-slider{
+    .carousel-inner {
+        position: relative;
+        width: 100%;
+        overflow: hidden;
+        border-radius: 20px;
+        height: auto;
+        // object-fit: contain;
+    }
+    
+    .carousel-item img {
+        // border-radius: 20px;
+        height: 600px;
+        object-fit: cover;
+    }
+    
+    .carousel-caption {
+        bottom: 32%;
+        // background: rgba(0, 0, 0, 0.047);
+        border-radius: 20px;
+        // backdrop-filter: blur(4px);
+        color: salmon;
+        font-weight: bolder;
+        // font-family: 'Rubik Moonrocks', cursive;
+        font-family: 'Satisfy', cursive;
+        // box-shadow: var(--shadow-box);
+    }
+}
+
+@media (max-width: 992px) {
+    .main-slider{
+        .carousel-item img {
+            height: 250px;
+        }
+    
+        .carousel-caption {
+            bottom: 12% !important;
+            border-radius: 20px;
+            background: rgba(0, 0, 0, 0.047);
+            backdrop-filter: blur(4px);
+    
+        }
+    }
+}
+
+@media (max-width: 557px) {
+    .main-slider{
+        // .carousel-inner {
+        //     // box-shadow: var(--stripe-shadow);
+        // }
+        .carousel-indicators {
+            display: none;
+        }
+    
+        .carousel-item img {
+            height: 170px;
+            object-fit: cover;
+            width: 100%;
+        }
+    
+        .carousel-caption {
+            bottom: 8% !important;
+            border-radius: 20px;
+            width: 50%;
+            left: 40%;
+    
+            h1.display-2 {
+                font-size: 25px;
+            }
+    
+            h2 {
+                font-size: 15px;
+            }
+        }
+    }
+}

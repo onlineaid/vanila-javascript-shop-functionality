@@ -1,0 +1,35 @@
+/* 
+-------------------------
+  1.1 : Main header css
+-------------------------
+*/
+.header_one {
+  box-shadow: var(--dark-shadow);
+
+  .logo{
+    padding: 3px 0px;
+    img{
+      height: 50px !important;
+      width: 50px !important;
+    }
+    // a {
+    //   text-decoration: none;
+    //     margin-bottom: 0;
+    //     text-decoration: none;
+    //     font-size: 40px;
+    //     font-weight: bold;
+    //     height: 50px;
+    //     width: 50px;
+    //     // background: rgb(12, 105, 255);
+    //     align-items: flex-start;
+    //     display: flex;
+    //     justify-content: center;
+    //     border-radius: 50%;
+    //     color: #fff;
+    //     overflow: hidden;
+    //     // span{
+    //     //   // line-height: 2.4;
+    //     // }
+    // }
+  }
+}

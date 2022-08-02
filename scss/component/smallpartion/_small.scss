@@ -1,0 +1,133 @@
+/* 
+------------------------------
+    3.1 : Auto update mini css
+-------------------------
+*/
+
+.small-cart {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+	margin-bottom: 15px;
+    .small-img {
+        display: flex;
+        gap: 3px;
+        flex-wrap: wrap;
+		position: relative;
+		padding: 10px;
+    
+        img {
+            height: auto;
+            width: 50px;
+            object-fit: contain;
+            border-radius: 6px;
+        }
+
+				
+		$animationSpeed: 10s;
+
+		// Animation
+		@keyframes scroll {
+			0% { transform: translateX(0); }
+			100% { transform: translateX(calc(-20px * 15))}
+		}
+
+		// Styling
+		.smooth-slider {
+			// background: white;
+			// box-shadow: 0 10px 20px -5px rgba(0, 0, 0, .125);
+			// height: 100px;
+			margin: auto;
+			overflow:hidden;
+			position: relative;
+			width: 220px;
+			// border-radius: 50px;
+			// box-shadow: var(--stripe-shadow);
+			
+			&::before,
+			&::after {
+				// @include white-gradient;
+				content: "";
+				// height: 100px;
+				position: absolute;
+				width: 200px;
+				z-index: 2;
+			}
+			
+			&::after {
+				right: 0;
+				top: 0;
+				transform: rotateZ(180deg);
+			}
+
+			&::before {
+				left: 0;
+				top: 0;
+			}
+			
+			.slide-track {
+				animation: scroll $animationSpeed linear infinite;
+				display: flex;
+				width: calc(10px * 10);
+				display: flex;
+				flex-direction: revert;
+				gap: 20px;
+			}
+			
+			// .slide {
+			// 	// width: 200px;
+			// 	// height: 100vh;
+			// }
+		}
+        
+    }
+}
+
+.mt-5px, .my-5px{
+    margin-top: 5px;
+}
+
+.mb-5px, .my-5px{
+    margin-bottom: 5px;
+}
+
+.ml-5px, .mx-5px{
+    margin-left: 5px;
+}
+
+.mr-5px, .mx-5px{
+    margin-right: 5px;
+}
+
+
+
+.hover-zoom {
+	overflow: hidden;
+	border-radius: 20px;
+	img{
+	transition: 0.5s ease;
+
+		&:hover {
+			transform: scale(1.2);
+
+		}
+		
+	}
+}
+
+.rounded-5px {
+	border-radius: 5px;
+}
+
+@media(max-width: 1199px) {
+	.small-cart {
+		.small-img {
+			img {
+				height: auto;
+				width: 40px;
+			}
+		}
+	}
+}

@@ -1,0 +1,74 @@
+/*
+--------------------------
+    9.1 : Smooth Scroll-X css 
+--------------------------
+*/
+
+.our-brand {
+    @mixin white-gradient {
+        background: var(--linear)
+    }
+    
+    $animationSpeed: 40s;
+    
+    // Animation
+    @keyframes scrollx {
+        0% { transform: translateX(0); }
+        100% { transform: translateX(calc(-250px * 7))}
+    }
+    
+    // Styling
+    .brand-slider {
+        background: var(--dark-opacity);
+        box-shadow: var(--brand-shadow);
+        margin: auto;
+        overflow:hidden;
+        position: relative;
+        width: 100%;
+        border-radius: 20px;
+        padding: 7px;
+        
+        &::before,
+        &::after {
+            @include white-gradient;
+            content: "";
+            height: 100px;
+            position: absolute;
+            width: 200px;
+            z-index: 2;
+        }
+        
+        &::after {
+            right: 0;
+            top: 0;
+            transform: rotateZ(180deg);
+            height: 100%;
+        }
+    
+        &::before {
+            left: 0;
+            top: 0;
+            height: 100%;
+        }
+        
+        .slide-track-on {
+            animation: scrollx $animationSpeed linear infinite;
+            display: flex;
+            width: calc(250px * 14);
+        }
+        
+        .single-slide {
+            height: 100px;
+            width: 250px;
+            margin: 0 10px;
+            border-radius: 20px;
+            
+            background-color: var(--dark-opacity);
+            img{
+                padding: 10px;
+                border-radius: 20px;
+                box-shadow: var(--stripe-shadow)
+            }
+        }
+    } 
+}

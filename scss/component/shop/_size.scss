@@ -1,0 +1,24 @@
+/*
+-------------------------
+  5.3 : Size Specification css
+-------------------------
+*/
+.size_specification {
+    display: flex;
+    justify-content: center;
+    background-color: var(--dark-opacity);
+      padding: 3px;
+      border-radius: 5px;
+    .size-box {
+      background-color: var(--dark-opacity);
+      padding: 5px 19px;
+      margin: 4px;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: 0.5s ease;
+      font-weight: bold;
+      &:hover {
+        background-color: var(--pkcolor2);
+      }
+    }
+}
